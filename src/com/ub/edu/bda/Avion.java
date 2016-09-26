@@ -7,12 +7,29 @@ package com.ub.edu.bda;
 
 /**
  *
- * @author enrique
+ * @author windows
  */
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "avion")
 public class Avion {
     
-    public Avion(){
+    @Id @GeneratedValue
+    @Column(name = "idPiloto")
+    private String matricula;    
     
+    public Avion(){
+      super();
     }
+    
+    public String getMatricula(){
+        return matricula;
+    } 
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }    
     
 }
